@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error Alert View Controller-->
+        <scene sceneID="Mz7-1o-kGT">
+            <objects>
+                <viewController storyboardIdentifier="ErrorAlertViewController" id="H7L-HD-jSh" customClass="ErrorAlertViewController" customModule="eais" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gp5-Db-sBm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erroricon1" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-G3-meZ">
+                                <rect key="frame" x="148.5" y="306" width="117" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="EOg-SS-Fzd"/>
+                                    <constraint firstAttribute="height" constant="104" id="Ih7-6L-vxJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네트워크 오류" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJH-6J-L8I">
+                                <rect key="frame" x="10" y="430" width="394" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Td9-Fb-Nc0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uIa-G3-meZ" firstAttribute="centerX" secondItem="gp5-Db-sBm" secondAttribute="centerX" id="Ff2-CT-6NJ"/>
+                            <constraint firstItem="Td9-Fb-Nc0" firstAttribute="trailing" secondItem="NJH-6J-L8I" secondAttribute="trailing" constant="10" id="UZh-ci-U5I"/>
+                            <constraint firstItem="NJH-6J-L8I" firstAttribute="top" secondItem="uIa-G3-meZ" secondAttribute="bottom" constant="20" id="WLA-Ko-yt3"/>
+                            <constraint firstItem="NJH-6J-L8I" firstAttribute="leading" secondItem="Td9-Fb-Nc0" secondAttribute="leading" constant="10" id="etP-Kb-OVa"/>
+                            <constraint firstItem="uIa-G3-meZ" firstAttribute="centerY" secondItem="gp5-Db-sBm" secondAttribute="centerY" constant="-90" id="fq2-Rs-fue"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sC-F8-DK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="erroricon1" width="116.5" height="103"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
