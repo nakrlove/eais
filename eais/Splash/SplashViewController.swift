@@ -9,21 +9,31 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    let network: NetworkManager = NetworkManager.sharedInstance
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ErrorAlertViewController.systemCheck(with: "앱 종료", serviceTime : nil) { (index, isCancelIndex) in
+            DispatchQueue.main.async {
+               print("Alert 확인했음!")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(" =================================== ")
+     
+//        NetworkManager.isUnreachable { _ in
+//          self.showOfflinePage()
+//        }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func showOfflinePage() -> Void {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "NetworkUnavailable", sender: self)
+        }
     }
-    */
 
 }
