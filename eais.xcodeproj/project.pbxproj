@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64028700297143F900927883 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640286FF297143F900927883 /* NetworkManager.swift */; };
+		64028704297146DF00927883 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64028703297146DF00927883 /* Common.storyboard */; };
+		640287072971470F00927883 /* ErrorAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640287062971470F00927883 /* ErrorAlertViewController.swift */; };
+		6402870A2971518A00927883 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640287092971518A00927883 /* Extension.swift */; };
 		646D94F4296D48490036CC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D94F3296D48490036CC2F /* AppDelegate.swift */; };
 		646D94F6296D48490036CC2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D94F5296D48490036CC2F /* SceneDelegate.swift */; };
 		646D94F8296D48490036CC2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D94F7296D48490036CC2F /* ViewController.swift */; };
@@ -18,9 +22,14 @@
 		646D9511296D72D80036CC2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D9510296D72D80036CC2F /* SplashViewController.swift */; };
 		646D9514296D72F60036CC2F /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646D9513296D72F60036CC2F /* ToastViewController.swift */; };
 		646D9518296D85410036CC2F /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646D9517296D85400036CC2F /* Splash.storyboard */; };
+		D2A60F148B8E09AD47757877 /* Pods_eais.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25180B754BD70840A393B11 /* Pods_eais.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640286FF297143F900927883 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		64028703297146DF00927883 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		640287062971470F00927883 /* ErrorAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewController.swift; sourceTree = "<group>"; };
+		640287092971518A00927883 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		646D94F0296D48490036CC2F /* eais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646D94F3296D48490036CC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646D94F5296D48490036CC2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +43,9 @@
 		646D9510296D72D80036CC2F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		646D9513296D72F60036CC2F /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		646D9517296D85400036CC2F /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		9A7FBF8B16D5F71D86D5D10E /* Pods-eais.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eais.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eais/Pods-eais.debug.xcconfig"; sourceTree = "<group>"; };
+		A25180B754BD70840A393B11 /* Pods_eais.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eais.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20CEBBFD4DF24A7525BAEBF /* Pods-eais.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eais.release.xcconfig"; path = "Pods/Target Support Files/Pods-eais/Pods-eais.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A60F148B8E09AD47757877 /* Pods_eais.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640286FE297143E400927883 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				640286FF297143F900927883 /* NetworkManager.swift */,
+				640287092971518A00927883 /* Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		64028702297146B900927883 /* CommonController */ = {
+			isa = PBXGroup;
+			children = (
+				64028703297146DF00927883 /* Common.storyboard */,
+				640287062971470F00927883 /* ErrorAlertViewController.swift */,
+			);
+			path = CommonController;
+			sourceTree = "<group>";
+		};
 		646D94E7296D48490036CC2F = {
 			isa = PBXGroup;
 			children = (
 				646D94F2296D48490036CC2F /* eais */,
 				646D94F1296D48490036CC2F /* Products */,
+				E5A2314950F4AF7C99927C36 /* Pods */,
+				E219ED05B1A6303588531494 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +99,8 @@
 		646D94F2296D48490036CC2F /* eais */ = {
 			isa = PBXGroup;
 			children = (
+				64028702297146B900927883 /* CommonController */,
+				640286FE297143E400927883 /* Utils */,
 				646D951A296D854C0036CC2F /* Splash */,
 				646D94F3296D48490036CC2F /* AppDelegate.swift */,
 				646D94F5296D48490036CC2F /* SceneDelegate.swift */,
@@ -90,6 +125,23 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		E219ED05B1A6303588531494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A25180B754BD70840A393B11 /* Pods_eais.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5A2314950F4AF7C99927C36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FBF8B16D5F71D86D5D10E /* Pods-eais.debug.xcconfig */,
+				E20CEBBFD4DF24A7525BAEBF /* Pods-eais.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 646D9507296D484B0036CC2F /* Build configuration list for PBXNativeTarget "eais" */;
 			buildPhases = (
+				CF4E0C4FB273F7881D13A1BD /* [CP] Check Pods Manifest.lock */,
 				646D94EC296D48490036CC2F /* Sources */,
 				646D94ED296D48490036CC2F /* Frameworks */,
 				646D94EE296D48490036CC2F /* Resources */,
+				ECE316465D1D1EB26A4F08BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,11 +204,53 @@
 				646D9503296D484B0036CC2F /* LaunchScreen.storyboard in Resources */,
 				646D9500296D484B0036CC2F /* Assets.xcassets in Resources */,
 				646D94FB296D48490036CC2F /* Main.storyboard in Resources */,
+				64028704297146DF00927883 /* Common.storyboard in Resources */,
 				646D9518296D85410036CC2F /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF4E0C4FB273F7881D13A1BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eais-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE316465D1D1EB26A4F08BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eais/Pods-eais-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eais/Pods-eais-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		646D94EC296D48490036CC2F /* Sources */ = {
@@ -163,8 +259,11 @@
 			files = (
 				646D9514296D72F60036CC2F /* ToastViewController.swift in Sources */,
 				646D950E296D72A10036CC2F /* RclassCommon.swift in Sources */,
+				640287072971470F00927883 /* ErrorAlertViewController.swift in Sources */,
 				646D94F8296D48490036CC2F /* ViewController.swift in Sources */,
 				646D94F4296D48490036CC2F /* AppDelegate.swift in Sources */,
+				6402870A2971518A00927883 /* Extension.swift in Sources */,
+				64028700297143F900927883 /* NetworkManager.swift in Sources */,
 				646D9511296D72D80036CC2F /* SplashViewController.swift in Sources */,
 				646D94F6296D48490036CC2F /* SceneDelegate.swift in Sources */,
 				646D94FE296D48490036CC2F /* eais.xcdatamodeld in Sources */,
@@ -311,11 +410,13 @@
 		};
 		646D9508296D484B0036CC2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A7FBF8B16D5F71D86D5D10E /* Pods-eais.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eais/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,11 +430,13 @@
 		};
 		646D9509296D484B0036CC2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20CEBBFD4DF24A7525BAEBF /* Pods-eais.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eais/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
