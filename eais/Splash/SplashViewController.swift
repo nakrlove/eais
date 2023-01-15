@@ -12,28 +12,35 @@ class SplashViewController: UIViewController {
     let network: NetworkManager = NetworkManager.sharedInstance
     
     override func viewWillAppear(_ animated: Bool) {
-        ErrorAlertViewController.systemCheck(with: "앱 종료", serviceTime : nil) { (index, isCancelIndex) in
-            DispatchQueue.main.async {
-               print("Alert 확인했음!")
-            }
+        
+        super.viewWillAppear(animated)
+
+        NetworkManager.isUnreachable { _ in
+            print(" ================isUnreachable=================== ")
+          self.showOfflinePage()
         }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(" =================================== ")
+       
      
-//        NetworkManager.isUnreachable { _ in
-//          self.showOfflinePage()
-//        }
+
     }
 
     private func showOfflinePage() -> Void {
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "NetworkUnavailable", sender: self)
-        }
+//        DispatchQueue.main.async {
+//            self.performSegue(withIdentifier: "NetworkUnavailable", sender: self)
+            
+            ErrorAlertViewController.networkCheck(with: "앱 종료", serviceTime : nil) { (index, isCancelIndex) in
+                DispatchQueue.main.async {
+                   print("Alert 확인했음!")
+                }
+            }
+//        }
     }
 
 }

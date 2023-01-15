@@ -25,42 +25,18 @@ extension UIWindow {
     
     static var key: UIWindow? {
             if #available(iOS 13, *) {
-                let window = UIApplication.shared.windows.filter{$0.isKeyWindow}.first
-//                return UIApplication.shared.windows.first { $0.isKeyWindow }
-                return window
+//                let window = UIApplication.shared.windows.filter{$0.isKeyWindow}.first
+//                return window
+//                let windowScenes = UIApplication.shared.connectedScenes.first as? UIWindowScene
+                
+//                return windowScenes?.windows.first
+                return UIApplication.shared.windows.first { $0.isKeyWindow }
+                
             } else {
                 return UIApplication.shared.keyWindow
             }
     }
     
-//    static let keyWd = UIApplication.shared.connectedScenes
-//        .filter({$0.activationState == .foregroundActive})
-//        .map({$0 as? UIWindowScene})
-//        .compactMap({$0})
-//        .first?.windows
-//        .filter({$0.isKeyWindow}).first
-//
-//
-//    public var visibleViewController: UIViewController? {
-//        return self.visibleViewControllerFrom(vc: self.rootViewController)
-//    }
-//
-//    public func visibleViewControllerFrom(vc: UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIViewController? {
-//
-//        if let nc = vc as? UINavigationController {
-//           return self.visibleViewControllerFrom(vc: nc.visibleViewController)
-//        }
-//
-//        if let tc = vc as? UITabBarController {
-//           return self.visibleViewControllerFrom(vc: tc.selectedViewController)
-//        }
-//
-//        if let pvc = vc?.presentedViewController {
-//           return self.visibleViewControllerFrom(vc: pvc)
-//        }
-//
-//        return vc
-//
-//    }
+
 }
 

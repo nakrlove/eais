@@ -64,16 +64,21 @@ class ErrorAlertViewController: UIViewController {
 
     
    
-    open class func systemCheck(with titleButton: String, serviceTime : String?, completion: @escaping ErrorPopupCompletion) {
+    open class func networkCheck(with titleBtn: String, serviceTime : String?, completion: @escaping ErrorPopupCompletion) {
         print(" =================systemCheck================== ")
-        if let errorAlertViewController =  UIStoryboard(name: "Common", bundle: nil).instantiateViewController(withIdentifier: "ErrorAlertViewController") as? ErrorAlertViewController {
-            
-            print(" =================systemCheck 1================== ")
-            if let topViewController = UIWindow.key?.rootViewController {
-                print(" =================systemCheck 2================== ")
-                topViewController.present(errorAlertViewController, animated: false)
+        DispatchQueue.main.async {
+            if let errorAlertViewController =  UIStoryboard(name: "Common", bundle: nil).instantiateViewController(withIdentifier: "ErrorAlertViewController") as? ErrorAlertViewController {
+                
+                errorAlertViewController.modalPresentationStyle = .fullScreen
+                DispatchQueue.main.async {
+
+                    if let topViewController = UIWindow.key?.rootViewController {
+                        print(" =================systemCheck 2================== ")
+                        topViewController.present(errorAlertViewController, animated: false, completion: nil)
+                    }
+                    
+                }
             }
-            
 
         }
     }

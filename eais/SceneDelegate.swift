@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let splashViewController = R.Storyboard.splash.instance()
         window?.rootViewController = splashViewController
         window?.makeKeyAndVisible()
-        window?.windowScene = windowScene
+//        window?.windowScene = windowScene
         
     }
 
